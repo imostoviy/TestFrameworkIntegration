@@ -1,0 +1,16 @@
+PODS:
+  - TestFramework (0.0.2)
+
+DEPENDENCIES:
+  - TestFramework (~> 0.0.2)
+
+SPEC REPOS:
+  https://github.com/imostoviy/TestFrameworkSpecRepo:
+    - TestFramework
+
+SPEC CHECKSUMS:
+  TestFramework: 08bbcba312e5f54df306bd646b785adaaeb4ea6b
+
+PODFILE CHECKSUM: b026c180eafb4c92a92dd2f1fb8441489e116393
+
+COCOAPODS: 1.9.3

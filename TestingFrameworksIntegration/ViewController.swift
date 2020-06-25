@@ -7,14 +7,12 @@
 //
 
 import UIKit
+import TestFramework
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBAction func buttonTouched(_ sender: Any) {
+        let vc = LoginViewController()
+        present(vc, animated: true, completion: nil)
     }
-
-
 }
 
