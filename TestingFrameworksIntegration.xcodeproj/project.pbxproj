@@ -13,7 +13,23 @@
 		84CE8BFD24A52A5700F3BCC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CE8BFB24A52A5700F3BCC0 /* Main.storyboard */; };
 		84CE8BFF24A52A5B00F3BCC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84CE8BFE24A52A5B00F3BCC0 /* Assets.xcassets */; };
 		84CE8C0224A52A5B00F3BCC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CE8C0024A52A5B00F3BCC0 /* LaunchScreen.storyboard */; };
+		84CE8C0B24A532DE00F3BCC0 /* MyFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CE8C0A24A532DE00F3BCC0 /* MyFramework.framework */; };
+		84CE8C0C24A532DE00F3BCC0 /* MyFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84CE8C0A24A532DE00F3BCC0 /* MyFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		84CE8C0D24A532DE00F3BCC0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				84CE8C0C24A532DE00F3BCC0 /* MyFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		84CE8BF224A52A5700F3BCC0 /* TestingFrameworksIntegration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestingFrameworksIntegration.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +40,7 @@
 		84CE8BFE24A52A5B00F3BCC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84CE8C0124A52A5B00F3BCC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84CE8C0324A52A5B00F3BCC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84CE8C0A24A532DE00F3BCC0 /* MyFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MyFramework.framework; path = Carthage/Build/iOS/MyFramework.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84CE8C0B24A532DE00F3BCC0 /* MyFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +60,7 @@
 			children = (
 				84CE8BF424A52A5700F3BCC0 /* TestingFrameworksIntegration */,
 				84CE8BF324A52A5700F3BCC0 /* Products */,
+				84CE8C0924A532DE00F3BCC0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +86,14 @@
 			path = TestingFrameworksIntegration;
 			sourceTree = "<group>";
 		};
+		84CE8C0924A532DE00F3BCC0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84CE8C0A24A532DE00F3BCC0 /* MyFramework.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,6 +104,7 @@
 				84CE8BEE24A52A5700F3BCC0 /* Sources */,
 				84CE8BEF24A52A5700F3BCC0 /* Frameworks */,
 				84CE8BF024A52A5700F3BCC0 /* Resources */,
+				84CE8C0D24A532DE00F3BCC0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -285,6 +313,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TestingFrameworksIntegration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,6 +334,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TestingFrameworksIntegration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import TestFramework
+//import TestFramework
+import MyFramework
 
 class ViewController: UIViewController {
     @IBAction func buttonTouched(_ sender: Any) {

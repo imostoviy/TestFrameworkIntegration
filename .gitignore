@@ -19,6 +19,7 @@ DerivedData
 *~.nib
 *.swp
 Pods/
+Carthage
 # Pods - for those of you who use CocoaPods
 #Pods
 .bundle
